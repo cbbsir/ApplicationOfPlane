@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ApplicationOfPlane.iml" filepath="$PROJECT_DIR$/ApplicationOfPlane.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Compass/Compass.iml" filepath="$PROJECT_DIR$/Compass/Compass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Plane/Plane.iml" filepath="$PROJECT_DIR$/Plane/Plane.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bundleTest/bundleTest.iml" filepath="$PROJECT_DIR$/bundleTest/bundleTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/butterflyTest/butterflyTest.iml" filepath="$PROJECT_DIR$/butterflyTest/butterflyTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customView/customView.iml" filepath="$PROJECT_DIR$/customView/customView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flowerTest1/flowerTest1.iml" filepath="$PROJECT_DIR$/flowerTest1/flowerTest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradienter/gradienter.iml" filepath="$PROJECT_DIR$/gradienter/gradienter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lifecycle/lifecycle.iml" filepath="$PROJECT_DIR$/lifecycle/lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/otherActivity/otherActivity.iml" filepath="$PROJECT_DIR$/otherActivity/otherActivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/planetask/planetask.iml" filepath="$PROJECT_DIR$/planetask/planetask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sensorTest/sensorTest.iml" filepath="$PROJECT_DIR$/sensorTest/sensorTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharedPreferencesTest/sharedPreferencesTest.iml" filepath="$PROJECT_DIR$/sharedPreferencesTest/sharedPreferencesTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/startActivity/startActivity.iml" filepath="$PROJECT_DIR$/startActivity/startActivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/surfaceViewTest/surfaceViewTest.iml" filepath="$PROJECT_DIR$/surfaceViewTest/surfaceViewTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/useTimeCount/useTimeCount.iml" filepath="$PROJECT_DIR$/useTimeCount/useTimeCount.iml" />
+    </modules>
+  </component>
+</project>

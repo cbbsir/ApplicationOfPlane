@@ -1,0 +1,1 @@
+include ':app', ':Plane', ':Compass', ':otherActivity', ':bundleTest', ':flowerTest1', ':butterflyTest', ':surfaceViewTest', ':sharedPreferencesTest', ':useTimeCount', ':startActivity', ':gradienter', ':sensorTest', ':customView', ':lifecycle', ':planetask'

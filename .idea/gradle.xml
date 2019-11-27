@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Compass" />
+            <option value="$PROJECT_DIR$/Plane" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bundleTest" />
+            <option value="$PROJECT_DIR$/butterflyTest" />
+            <option value="$PROJECT_DIR$/customView" />
+            <option value="$PROJECT_DIR$/flowerTest1" />
+            <option value="$PROJECT_DIR$/gradienter" />
+            <option value="$PROJECT_DIR$/lifecycle" />
+            <option value="$PROJECT_DIR$/otherActivity" />
+            <option value="$PROJECT_DIR$/planetask" />
+            <option value="$PROJECT_DIR$/sensorTest" />
+            <option value="$PROJECT_DIR$/sharedPreferencesTest" />
+            <option value="$PROJECT_DIR$/startActivity" />
+            <option value="$PROJECT_DIR$/surfaceViewTest" />
+            <option value="$PROJECT_DIR$/useTimeCount" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
