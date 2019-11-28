@@ -20,7 +20,7 @@ public class PlaneView extends View
         super(context);
         // 定义飞机图片
         plane = BitmapFactory.decodeResource(context.getResources(),
-                R.drawable.plane);
+                R.drawable.plane1);
         setFocusable(true);
     }
     @Override

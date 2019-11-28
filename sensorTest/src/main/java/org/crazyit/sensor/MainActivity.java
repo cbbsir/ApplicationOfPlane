@@ -108,81 +108,81 @@ public class MainActivity extends Activity
 		switch (sensorType)
 		{
 			// 方向传感器
-			case Sensor.TYPE_ORIENTATION:
-				sb = new StringBuilder();
-				sb.append("绕Z轴转过的角度：");
-				sb.append(values[0]);
-				sb.append("\n绕X轴转过的角度：");
-				sb.append(values[1]);
-				sb.append("\n绕Y轴转过的角度：");
-				sb.append(values[2]);
-				etOrientation.setText(sb.toString());
-				break;
+//			case Sensor.TYPE_ORIENTATION:
+//				sb = new StringBuilder();
+//				sb.append("绕Z轴转过的角度：");
+//				sb.append(values[0]);
+//				sb.append("\n绕X轴转过的角度：");
+//				sb.append(values[1]);
+//				sb.append("\n绕Y轴转过的角度：");
+//				sb.append(values[2]);
+//				etOrientation.setText(sb.toString());
+//				break;
 			// 陀螺仪传感器
-			case Sensor.TYPE_GYROSCOPE:
-				sb = new StringBuilder();
-				sb.append("绕X轴旋转的角速度：");
-				sb.append(values[0]);
-				sb.append("\n绕Y轴旋转的角速度：");
-				sb.append(values[1]);
-				sb.append("\n绕Z轴旋转的角速度：");
-				sb.append(values[2]);
-				etGyro.setText(sb.toString());
-				break;
+//			case Sensor.TYPE_GYROSCOPE:
+//				sb = new StringBuilder();
+//				sb.append("绕X轴旋转的角速度：");
+//				sb.append(values[0]);
+//				sb.append("\n绕Y轴旋转的角速度：");
+//				sb.append(values[1]);
+//				sb.append("\n绕Z轴旋转的角速度：");
+//				sb.append(values[2]);
+//				etGyro.setText(sb.toString());
+//				break;
 			// 磁场传感器
-			case Sensor.TYPE_MAGNETIC_FIELD:
-				sb = new StringBuilder();
-				sb.append("X轴方向上的磁场强度：");
-				sb.append(values[0]);
-				sb.append("\nY轴方向上的磁场强度：");
-				sb.append(values[1]);
-				sb.append("\nZ轴方向上的磁场强度：");
-				sb.append(values[2]);
-				etMagnetic.setText(sb.toString());
-				break;
+//			case Sensor.TYPE_MAGNETIC_FIELD:
+//				sb = new StringBuilder();
+//				sb.append("X轴方向上的磁场强度：");
+//				sb.append(values[0]);
+//				sb.append("\nY轴方向上的磁场强度：");
+//				sb.append(values[1]);
+//				sb.append("\nZ轴方向上的磁场强度：");
+//				sb.append(values[2]);
+//				etMagnetic.setText(sb.toString());
+//				break;
 			// 重力传感器
 			case Sensor.TYPE_GRAVITY:
 				sb = new StringBuilder();
 				sb.append("X轴方向上的重力：");
-				sb.append(values[0]);
+				sb.append((int)(values[0]*10));
 				sb.append("\nY轴方向上的重力：");
-				sb.append(values[1]);
+				sb.append((int)(values[1]*10));
 				sb.append("\nZ方向上的重力：");
-				sb.append(values[2]);
+				sb.append((int)(values[2]*10));
 				etGravity.setText(sb.toString());
 				break;
 			// 线性加速度传感器
-			case Sensor.TYPE_LINEAR_ACCELERATION:
-				sb = new StringBuilder();
-				sb.append("X轴方向上的线性加速度：");
-				sb.append(values[0]);
-				sb.append("\nY轴方向上的线性加速度：");
-				sb.append(values[1]);
-				sb.append("\nZ轴方向上的线性加速度：");
-				sb.append(values[2]);
-				etLinearAcc.setText(sb.toString());
-				break;
+//			case Sensor.TYPE_LINEAR_ACCELERATION:
+//				sb = new StringBuilder();
+//				sb.append("X轴方向上的线性加速度：");
+//				sb.append(values[0]);
+//				sb.append("\nY轴方向上的线性加速度：");
+//				sb.append(values[1]);
+//				sb.append("\nZ轴方向上的线性加速度：");
+//				sb.append(values[2]);
+//				etLinearAcc.setText(sb.toString());
+//				break;
 			// 温度传感器
-			case Sensor.TYPE_AMBIENT_TEMPERATURE:
-				sb = new StringBuilder();
-				sb.append("当前温度为：");
-				sb.append(values[0]);
-				etTemerature.setText(sb.toString());
-				break;
+//			case Sensor.TYPE_AMBIENT_TEMPERATURE:
+//				sb = new StringBuilder();
+//				sb.append("当前温度为：");
+//				sb.append(values[0]);
+//				etTemerature.setText(sb.toString());
+//				break;
 			// 光传感器
-			case Sensor.TYPE_LIGHT:
-				sb = new StringBuilder();
-				sb.append("当前光的强度为：");
-				sb.append(values[0]);
-				etLight.setText(sb.toString());
-				break;
+//			case Sensor.TYPE_LIGHT:
+//				sb = new StringBuilder();
+//				sb.append("当前光的强度为：");
+//				sb.append(values[0]);
+//				etLight.setText(sb.toString());
+//				break;
 			// 压力传感器
-			case Sensor.TYPE_PRESSURE:
-				sb = new StringBuilder();
-				sb.append("当前压力为：");
-				sb.append(values[0]);
-				etPressure.setText(sb.toString());
-				break;
+//			case Sensor.TYPE_PRESSURE:
+//				sb = new StringBuilder();
+//				sb.append("当前压力为：");
+//				sb.append(values[0]);
+//				etPressure.setText(sb.toString());
+//				break;
 		}
 	}
 }
