@@ -15,9 +15,7 @@ public class StartActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
-        //改变背景图片透明度
-        View vw = findViewById(R.id.startd);
-        vw.getBackground().setAlpha(200);
+
 
         //登陆按钮
         Button login = (Button)findViewById(R.id.login);

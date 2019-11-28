@@ -7,10 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.example.chenbing.planetask.domain.Person;
 
 public class LoginActivity extends Activity {
 
@@ -50,7 +48,7 @@ public class LoginActivity extends Activity {
                     // 启动intent对应的Activity
                     startActivity(intent);
                 }else{
-                    result ="您暂时还未注册";
+                    result ="您暂时还未注册,用户名或密码不正确";
                 }
 
                 // 使用Toast提示信息
@@ -60,5 +58,15 @@ public class LoginActivity extends Activity {
 
             }
         });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 }

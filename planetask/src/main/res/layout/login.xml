@@ -3,7 +3,8 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:gravity="center|center_horizontal"
-	android:background="@drawable/p3">
+	android:background="@drawable/p3"
+	android:alpha="0.7">
 
 	<TableRow
 		android:layout_width="match_parent"
@@ -36,6 +37,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:hint="请填写您的账号"
+			android:textColor="#FF0000"
 			android:selectAllOnFocus="true"
 			android:layout_column="8" />
 	</TableRow>
