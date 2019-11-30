@@ -2,6 +2,7 @@ package com.example.chenbing.planetask;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -14,26 +15,37 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.chenbing.planetask.component.MainService;
 import com.example.chenbing.planetask.component.PlaneView;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends Activity implements SensorEventListener
 {
     // 定义Sensor管理器
     private SensorManager mSensorManager;
-    EditText etGravity;
+//    EditText etGravity;
 
     // 定义飞机的移动速度
     private int speed = 10;
     PlaneView planeView;
+
+
 
     int count = 1;
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        //添加音乐
+//        Intent music = new Intent(MainActivity.this,MainService.class);
+//        startService(music);
         // 去掉窗口标题
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         // 全屏显示
@@ -113,6 +125,8 @@ public class MainActivity extends Activity implements SensorEventListener
     public boolean dispatchTouchEvent(MotionEvent ev) {
         //游戏的开始和暂停Toast提示框
         String tip;
+        Toast toast = new Toast(MainActivity.this);
+        ImageView image = new ImageView(MainActivity.this);
 
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
@@ -121,20 +135,51 @@ public class MainActivity extends Activity implements SensorEventListener
                     count--;
                     speed = 0;
                     tip = "游戏暂停";
+                    image.setImageResource(R.drawable.pause);
                     this.onPause();
                 }else {
                     count++;
                     speed = 10;
                     tip = "游戏开始";
+                    image.setImageResource(R.drawable.continuepic);
                     this.onResume();
                 }
 
                 // 使用Toast提示信息
-                Toast.makeText(MainActivity.this, tip
-                        , Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, tip
+//                        , Toast.LENGTH_SHORT).show();
+
+                //创建一个LinearLayout容器
+                LinearLayout ll = new LinearLayout(MainActivity.this);
+                ll.addView(image);
+                //创建一个TextView
+                TextView textView = new TextView(MainActivity.this);
+                textView.setText(tip);
+                textView.setTextColor(Color.GREEN);
+                ll.addView(textView);
+                toast.setView(ll);
+                toast.setDuration(Toast.LENGTH_LONG);
+                showMyToast(toast,500);
                 break;
         }
         return super.dispatchTouchEvent(ev);
+    }
+
+    public void showMyToast(final Toast toast, final int cnt) {
+        final Timer timer =new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                toast.show();
+            }
+        },0,3000);
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                toast.cancel();
+                timer.cancel();
+            }
+        }, cnt );
     }
 
     @Override
@@ -164,6 +209,9 @@ public class MainActivity extends Activity implements SensorEventListener
     protected void onStop() {
         // 程序退出时取消注册传感器监听器
         mSensorManager.unregisterListener(this);
+
+        Intent music = new Intent(MainActivity.this,MainService.class);
+        stopService(music);
         super.onStop();
     }
 
@@ -193,13 +241,19 @@ public class MainActivity extends Activity implements SensorEventListener
         //判断飞机是否碰到手机边缘
         if (planeView.currentX < 0 || planeView.currentY < 0 || planeView.currentX+225 >  metrics.widthPixels || planeView.currentY + 225 > metrics.heightPixels){
             // 使用Toast提示信息
-            Toast.makeText(MainActivity.this, tip
-                    , Toast.LENGTH_SHORT).show();
+            Toast toast = new Toast(MainActivity.this);
+            //创建一个TextView
+            TextView textView = new TextView(MainActivity.this);
+            textView.setText(tip);
+            toast.setView(textView);
+            toast.setDuration(Toast.LENGTH_LONG);
+            showMyToast(toast, 1000);
 
             Intent intent = new Intent(MainActivity.this,
                     StartActivity.class);
             // 启动intent对应的Activity
             startActivity(intent);
+            finish();
         }
 
     }
